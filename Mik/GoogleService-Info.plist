@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>676589601075-a4dic21t3b5bi8qujj4g6h5if14k0hme.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.676589601075-a4dic21t3b5bi8qujj4g6h5if14k0hme</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDHtO5oOULJs_51TgI-0SRf8hcPqsaY8K4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>676589601075</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>mikku.Mik</string>
+	<key>PROJECT_ID</key>
+	<string>testing-fb-with-swift</string>
+	<key>STORAGE_BUCKET</key>
+	<string>testing-fb-with-swift.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:676589601075:ios:cacadd7c6c059bd515be46</string>
+	<key>DATABASE_URL</key>
+	<string>https://testing-fb-with-swift.firebaseio.com</string>
+</dict>
+</plist>
