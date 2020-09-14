@@ -36,3 +36,7 @@ extension UIView {
     }
     
 }
+
+extension UIViewController {
+    
+}

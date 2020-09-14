@@ -10,21 +10,45 @@ import UIKit
 
 class ExploreViewController: UIViewController {
 
+    private let searchBar: UISearchBar = {
+        let searchBar = UISearchBar()
+        
+        return searchBar
+    }()
+    
+    private var collectionView: UICollectionView?
     override func viewDidLoad() {
         super.viewDidLoad()
         AuthManager.shared.handleNotAuthenticated(vc: self)
-        // Do any additional setup after loading the view.
+        
+        view.backgroundColor = .systemBackground
+        navigationController?.navigationBar.topItem?.titleView = searchBar
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        
+        
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        
+        collectionView?.delegate = self
+        collectionView?.dataSource = self
+        
+        guard let collectionView = collectionView else {
+            return
+        }
+        view.addSubview(collectionView)
+    }
+
+}
+
+extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 0
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return UICollectionViewCell()
     }
-    */
-
+    
+    
 }

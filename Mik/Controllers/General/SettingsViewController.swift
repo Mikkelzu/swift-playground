@@ -6,6 +6,7 @@
 //  Copyright © 2020 Michael. All rights reserved.
 //
 
+import SafariServices
 import UIKit
 
 struct SettingCellModel {
@@ -50,12 +51,66 @@ final class SettingsViewController: UIViewController {
     }
     
     private func configureModels() {
-        let section = [
+        data.append([
+            SettingCellModel(title: "Edit Profile") { [weak self] in
+                self?.didTapEditProfile()
+            },
+            SettingCellModel(title: "Invite Friends") { [weak self] in
+                self?.didTapInviteFriends()
+            }
+        ])
+        
+        data.append([
+            SettingCellModel(title: "Terms of Service") { [weak self] in
+                self?.didTapTerms()
+            },
+            SettingCellModel(title: "Privacy Policy") { [weak self] in
+                self?.didTapPrivacy()
+            },
+            SettingCellModel(title: "Help") { [weak self] in
+                self?.didTapHelp()
+            },
+            SettingCellModel(title: "About Maiven") { [weak self] in
+                self?.didTapAbout()
+            }
+        ])
+        
+        data.append([
             SettingCellModel(title: "Logout") { [weak self] in
                 self?.didTapLogOut()
             }
-        ]
-        data.append(section)
+        ])
+    }
+    
+    private func didTapEditProfile() {
+        let vc = EditProfileViewController()
+        
+        vc.title = "Edit Profile"
+        
+        let navVC = UINavigationController(rootViewController: vc)
+        present(navVC, animated: true)
+    }
+    
+    private func didTapInviteFriends() {
+        
+    }
+    
+    private func didTapTerms() {
+        self.openURL(type: .terms)
+    }
+    
+    private func didTapPrivacy() {
+        self.openURL(type: .privacy)
+        
+    }
+    
+    private func didTapHelp() {
+        self.openURL(type: .help)
+        
+    }
+    
+    private func didTapAbout() {
+        
     }
     
     
@@ -89,7 +144,29 @@ final class SettingsViewController: UIViewController {
         
     }
     
+    enum SettingsURLType {
+        case terms, privacy, help
+    }
     
+    private func openURL(type: SettingsURLType) {
+        
+        let urlString: String
+        
+        switch  type {
+        case .terms: urlString = "https://help.instagram.com/478745558852511"
+        case .privacy: urlString = "https://help.instagram.com/519522125107875"
+        case .help: urlString = "https://help.instagram.com/"
+        }
+        
+        guard let url = URL(string: urlString) else {
+            return
+        }
+        
+        let vc = SFSafariViewController(url: url)
+        present(vc, animated: true)
+        
+        
+    }
 }
 
 extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
@@ -104,6 +181,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = data[indexPath.section][indexPath.row].title
+        cell.accessoryType = .disclosureIndicator
         return cell
     }
     
@@ -114,3 +192,4 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         model.handler()
     }
 }
+
