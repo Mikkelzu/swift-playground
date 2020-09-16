@@ -7,10 +7,13 @@
 //
 
 import FirebaseAuth
+import FirebaseDatabase
+
 
 public class AuthManager {
     
     static let shared = AuthManager()
+    private let database = Database.database().reference()
     
     public func loginUser(username: String, password: String, completion: @escaping (Bool) -> Void) {
         Auth.auth().signIn(withEmail: username, password: password) { authResult, error in
@@ -66,6 +69,22 @@ public class AuthManager {
             let loginVC = LoginViewController()
             loginVC.modalPresentationStyle = .fullScreen
             vc.present(loginVC, animated: false)
+        }
+    }
+    
+    
+    public func getCurrentUserData() {
+        let userId = Auth.auth().currentUser?.uid
+        
+        database.child("users").child(userId!).observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            let username = value?["username"] as? String ?? ""
+            
+//            let user = User(username: username)
+            // ...
+        }) { (error) in
+            print(error.localizedDescription)
         }
     }
 }

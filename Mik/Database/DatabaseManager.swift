@@ -19,7 +19,7 @@ public class DatabaseManager {
     }
     
     public func insertNewUser(email: String, username: String, completion: @escaping (Bool) -> Void) {
-        database.child(email.safeDatabaseKey()).setValue(["username": username]) { error, _ in 
+        database.child(email.safeDatabaseKey()).setValue(["username": username]) { error, _ in
             if error == nil {
                 completion(true)
             } else {
