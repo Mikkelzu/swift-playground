@@ -19,6 +19,9 @@
 		4C1A35DB250F69820069F510 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A35DA250F69820069F510 /* Helpers.swift */; };
 		4C1A35DD250F728F0069F510 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A35DC250F728F0069F510 /* UIExtensions.swift */; };
 		4C1A35E0250F8A980069F510 /* LoginRegisterViewElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A35DF250F8A980069F510 /* LoginRegisterViewElements.swift */; };
+		4C34BB342513FD0200F5DEFE /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34BB332513FD0200F5DEFE /* Models.swift */; };
+		4C34BB362514013100F5DEFE /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34BB352514013100F5DEFE /* PostViewController.swift */; };
+		4C34BB3825140EAD00F5DEFE /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34BB3725140EAD00F5DEFE /* ListViewController.swift */; };
 		4C3F9F31250FFCA1000762B6 /* FeedPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F9F30250FFCA1000762B6 /* FeedPostTableViewCell.swift */; };
 		4C3F9F34250FFF93000762B6 /* PostHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F9F33250FFF93000762B6 /* PostHeaderTableViewCell.swift */; };
 		4C3F9F36250FFFB9000762B6 /* FeedPostActionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F9F35250FFFB9000762B6 /* FeedPostActionsTableViewCell.swift */; };
@@ -56,6 +59,9 @@
 		4C1A35DA250F69820069F510 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		4C1A35DC250F728F0069F510 /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 		4C1A35DF250F8A980069F510 /* LoginRegisterViewElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterViewElements.swift; sourceTree = "<group>"; };
+		4C34BB332513FD0200F5DEFE /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		4C34BB352514013100F5DEFE /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		4C34BB3725140EAD00F5DEFE /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		4C3F9F30250FFCA1000762B6 /* FeedPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPostTableViewCell.swift; sourceTree = "<group>"; };
 		4C3F9F33250FFF93000762B6 /* PostHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		4C3F9F35250FFFB9000762B6 /* FeedPostActionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPostActionsTableViewCell.swift; sourceTree = "<group>"; };
@@ -121,6 +127,7 @@
 		4C1A35C1250EC85D0069F510 /* Mik */ = {
 			isa = PBXGroup;
 			children = (
+				4C34BB322513FCE400F5DEFE /* Models */,
 				4C145EB8250F9310003476E9 /* Database */,
 				4C1A35D9250F696C0069F510 /* Helpers */,
 				4C1A35D7250EC88D0069F510 /* Views */,
@@ -174,6 +181,14 @@
 			path = Items;
 			sourceTree = "<group>";
 		};
+		4C34BB322513FCE400F5DEFE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4C34BB332513FD0200F5DEFE /* Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		4C3F9F2F250FFC7B000762B6 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +228,8 @@
 				4C9FB355250FB1F400D08FD6 /* SettingsViewController.swift */,
 				4CD9F81E250FD8F000D49A04 /* NotificationsViewController.swift */,
 				4C3F9F39251007D5000762B6 /* EditProfileViewController.swift */,
+				4C34BB352514013100F5DEFE /* PostViewController.swift */,
+				4C34BB3725140EAD00F5DEFE /* ListViewController.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -359,6 +376,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C34BB3825140EAD00F5DEFE /* ListViewController.swift in Sources */,
 				4C9F77C02512D24600A0D198 /* ProfileInfoHeaderCollectionReusableView.swift in Sources */,
 				4C3F9F3A251007D5000762B6 /* EditProfileViewController.swift in Sources */,
 				4C145EBC250F93D2003476E9 /* DatabaseManager.swift in Sources */,
@@ -375,6 +393,7 @@
 				4C9F77C22512D26900A0D198 /* ProfileTabsCollectionReusableView.swift in Sources */,
 				4C9F77BB2512CC5B00A0D198 /* FormTableViewCell.swift in Sources */,
 				4CD9F81D250FD2C700D49A04 /* StringExtensions.swift in Sources */,
+				4C34BB362514013100F5DEFE /* PostViewController.swift in Sources */,
 				4CD9F81F250FD8F000D49A04 /* NotificationsViewController.swift in Sources */,
 				4C1A35C3250EC85D0069F510 /* AppDelegate.swift in Sources */,
 				4C1A35C5250EC85D0069F510 /* SceneDelegate.swift in Sources */,
@@ -383,6 +402,7 @@
 				4C3F9F36250FFFB9000762B6 /* FeedPostActionsTableViewCell.swift in Sources */,
 				4C1A35DD250F728F0069F510 /* UIExtensions.swift in Sources */,
 				4C9FB354250FB1E700D08FD6 /* ExploreViewController.swift in Sources */,
+				4C34BB342513FD0200F5DEFE /* Models.swift in Sources */,
 				4C9FB34D250FAF9000D08FD6 /* LoginViewController.swift in Sources */,
 				4C1A35DB250F69820069F510 /* Helpers.swift in Sources */,
 			);
