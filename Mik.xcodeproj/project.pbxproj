@@ -28,6 +28,11 @@
 		4C3F9F38250FFFCF000762B6 /* FeedPostGeneralTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F9F37250FFFCF000762B6 /* FeedPostGeneralTableViewCell.swift */; };
 		4C3F9F3A251007D5000762B6 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F9F39251007D5000762B6 /* EditProfileViewController.swift */; };
 		4C5233FE250F8F8C004883C4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C5233FD250F8F8C004883C4 /* GoogleService-Info.plist */; };
+		4C6974292514B9B000ED8124 /* UserFollowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6974282514B9B000ED8124 /* UserFollowTableViewCell.swift */; };
+		4C69742B2514BFC900ED8124 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C69742A2514BFC900ED8124 /* CameraViewController.swift */; };
+		4C69742D2514D54B00ED8124 /* NoNotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C69742C2514D54B00ED8124 /* NoNotificationsView.swift */; };
+		4C6974302514EBF500ED8124 /* NotificationFollowEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C69742F2514EBF500ED8124 /* NotificationFollowEventTableViewCell.swift */; };
+		4C6974322514EC0200ED8124 /* NotificationLikeEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6974312514EC0200ED8124 /* NotificationLikeEventTableViewCell.swift */; };
 		4C8EFD50250FB61800392933 /* ProfileViewElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8EFD4F250FB61800392933 /* ProfileViewElements.swift */; };
 		4C9F77BB2512CC5B00A0D198 /* FormTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9F77BA2512CC5B00A0D198 /* FormTableViewCell.swift */; };
 		4C9F77BE2512D20300A0D198 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9F77BD2512D20300A0D198 /* PhotoCollectionViewCell.swift */; };
@@ -68,6 +73,11 @@
 		4C3F9F37250FFFCF000762B6 /* FeedPostGeneralTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPostGeneralTableViewCell.swift; sourceTree = "<group>"; };
 		4C3F9F39251007D5000762B6 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		4C5233FD250F8F8C004883C4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4C6974282514B9B000ED8124 /* UserFollowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFollowTableViewCell.swift; sourceTree = "<group>"; };
+		4C69742A2514BFC900ED8124 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		4C69742C2514D54B00ED8124 /* NoNotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoNotificationsView.swift; sourceTree = "<group>"; };
+		4C69742F2514EBF500ED8124 /* NotificationFollowEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationFollowEventTableViewCell.swift; sourceTree = "<group>"; };
+		4C6974312514EC0200ED8124 /* NotificationLikeEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationLikeEventTableViewCell.swift; sourceTree = "<group>"; };
 		4C8EFD4F250FB61800392933 /* ProfileViewElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewElements.swift; sourceTree = "<group>"; };
 		4C9F77BA2512CC5B00A0D198 /* FormTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTableViewCell.swift; sourceTree = "<group>"; };
 		4C9F77BD2512D20300A0D198 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -158,6 +168,7 @@
 			children = (
 				4C9F77BC2512D1CE00A0D198 /* CollectionView Headers */,
 				4C3F9F2F250FFC7B000762B6 /* Cells */,
+				4C69742C2514D54B00ED8124 /* NoNotificationsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,9 +203,11 @@
 		4C3F9F2F250FFC7B000762B6 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				4C69742E2514EBD300ED8124 /* Notification Cells */,
 				4C3F9F32250FFF6A000762B6 /* Home Feed */,
 				4C9F77BA2512CC5B00A0D198 /* FormTableViewCell.swift */,
 				4C9F77BD2512D20300A0D198 /* PhotoCollectionViewCell.swift */,
+				4C6974282514B9B000ED8124 /* UserFollowTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -208,6 +221,15 @@
 				4C3F9F37250FFFCF000762B6 /* FeedPostGeneralTableViewCell.swift */,
 			);
 			path = "Home Feed";
+			sourceTree = "<group>";
+		};
+		4C69742E2514EBD300ED8124 /* Notification Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4C69742F2514EBF500ED8124 /* NotificationFollowEventTableViewCell.swift */,
+				4C6974312514EC0200ED8124 /* NotificationLikeEventTableViewCell.swift */,
+			);
+			path = "Notification Cells";
 			sourceTree = "<group>";
 		};
 		4C8EFD4D250FB5D700392933 /* Onboarding */ = {
@@ -230,6 +252,7 @@
 				4C3F9F39251007D5000762B6 /* EditProfileViewController.swift */,
 				4C34BB352514013100F5DEFE /* PostViewController.swift */,
 				4C34BB3725140EAD00F5DEFE /* ListViewController.swift */,
+				4C69742A2514BFC900ED8124 /* CameraViewController.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -382,7 +405,9 @@
 				4C145EBC250F93D2003476E9 /* DatabaseManager.swift in Sources */,
 				4C8EFD50250FB61800392933 /* ProfileViewElements.swift in Sources */,
 				4C9FB350250FAFA800D08FD6 /* RegisterViewController.swift in Sources */,
+				4C69742D2514D54B00ED8124 /* NoNotificationsView.swift in Sources */,
 				4C3F9F31250FFCA1000762B6 /* FeedPostTableViewCell.swift in Sources */,
+				4C6974302514EBF500ED8124 /* NotificationFollowEventTableViewCell.swift in Sources */,
 				4C3F9F38250FFFCF000762B6 /* FeedPostGeneralTableViewCell.swift in Sources */,
 				4C1A35C7250EC85D0069F510 /* HomeViewController.swift in Sources */,
 				4C145EBA250F9326003476E9 /* AuthManager.swift in Sources */,
@@ -391,11 +416,14 @@
 				4C1A35E0250F8A980069F510 /* LoginRegisterViewElements.swift in Sources */,
 				4C9FB352250FB1BE00D08FD6 /* ProfileViewController.swift in Sources */,
 				4C9F77C22512D26900A0D198 /* ProfileTabsCollectionReusableView.swift in Sources */,
+				4C69742B2514BFC900ED8124 /* CameraViewController.swift in Sources */,
+				4C6974292514B9B000ED8124 /* UserFollowTableViewCell.swift in Sources */,
 				4C9F77BB2512CC5B00A0D198 /* FormTableViewCell.swift in Sources */,
 				4CD9F81D250FD2C700D49A04 /* StringExtensions.swift in Sources */,
 				4C34BB362514013100F5DEFE /* PostViewController.swift in Sources */,
 				4CD9F81F250FD8F000D49A04 /* NotificationsViewController.swift in Sources */,
 				4C1A35C3250EC85D0069F510 /* AppDelegate.swift in Sources */,
+				4C6974322514EC0200ED8124 /* NotificationLikeEventTableViewCell.swift in Sources */,
 				4C1A35C5250EC85D0069F510 /* SceneDelegate.swift in Sources */,
 				4C9F77BE2512D20300A0D198 /* PhotoCollectionViewCell.swift in Sources */,
 				4C9FB356250FB1F400D08FD6 /* SettingsViewController.swift in Sources */,

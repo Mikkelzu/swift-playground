@@ -21,6 +21,7 @@ struct User {
     let bio: String
     let counts: UserCount
     let joinDate: Date
+    let profilePic: URL
 }
 
 struct UserCount {
