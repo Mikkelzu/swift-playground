@@ -8,21 +8,6 @@
 
 import UIKit
 
-protocol userFollowTableViewCellDelegate: AnyObject {
-    func didTapFollowToggleButton(model: UserRelation)
-    
-}
-
-enum UserFollowState {
-    case following, notFollowing
-}
-
-struct UserRelation {
-    let username: String
-    let name: String
-    let type: UserFollowState
-}
-
 class UserFollowTableViewCell: UITableViewCell {
 
     static let identifier = "UserFollowTableViewCell"
@@ -59,6 +44,8 @@ class UserFollowTableViewCell: UITableViewCell {
     private let followButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .link
+        button.layer.cornerRadius = 4
+        button.layer.masksToBounds = true
         return button
     }()
 
@@ -91,16 +78,13 @@ class UserFollowTableViewCell: UITableViewCell {
         nameLabel.text = model.name
         usernameLabel.text = model.username
         
-        switch model.type {
-        case .following:
-            // show unfollow
+        if (model.type == UserFollowState.following) {
             followButton.setTitle("Unfollow", for: .normal)
             followButton.backgroundColor = .systemBackground
             followButton.layer.borderWidth = 1
             followButton.layer.borderColor = UIColor.label.cgColor
             followButton.setTitleColor(.label, for: .normal)
-        case .notFollowing:
-            // show follow
+        } else {
             followButton.setTitle("Follow", for: .normal)
             followButton.backgroundColor = .systemBlue
             followButton.layer.borderWidth = 0

@@ -8,11 +8,7 @@
 
 import UIKit
 
-protocol FormTableViewCellDelegate: AnyObject {
-    func formTableViewCell(_cell: FormTableViewCell, didUpdateField updatedModel: EditProfileFormModel)
-}
-
-class FormTableViewCell: UITableViewCell, UITextFieldDelegate {
+public class FormTableViewCell: UITableViewCell, UITextFieldDelegate {
 
     static let identifier = "FormTableViewCell"
     
@@ -58,7 +54,7 @@ class FormTableViewCell: UITableViewCell, UITextFieldDelegate {
         field.text = model.value
     }
     
-    override func prepareForReuse() {
+    public override func prepareForReuse() {
         super.prepareForReuse()
         
         formLabel.text = nil
@@ -66,7 +62,7 @@ class FormTableViewCell: UITableViewCell, UITextFieldDelegate {
         field.text = nil
     }
     
-    override func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
         
         formLabel.frame = CGRect(x: 5, y: 0, width: contentView.width / 3, height: contentView.height)
@@ -74,7 +70,7 @@ class FormTableViewCell: UITableViewCell, UITextFieldDelegate {
         
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         model?.value = textField.text
         guard let model = model else {
             return true

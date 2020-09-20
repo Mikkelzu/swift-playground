@@ -133,7 +133,6 @@ class RegisterViewController: UIViewController {
     
 }
 
-
 extension RegisterViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == usernameField {

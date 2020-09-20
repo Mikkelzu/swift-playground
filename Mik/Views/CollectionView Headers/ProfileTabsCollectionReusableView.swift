@@ -8,12 +8,7 @@
 
 import UIKit
 
-protocol ProfileTabsCollectionReusableViewDelegate: AnyObject {
-    func didTapGridButtonTab()
-    func didTapTaggedButtonTab()
-}
-
-class ProfileTabsCollectionReusableView: UICollectionReusableView {
+public class ProfileTabsCollectionReusableView: UICollectionReusableView {
     static let identifier = "ProfileTabsCollectionReusableView"
     
     public weak var delegate: ProfileTabsCollectionReusableViewDelegate?
@@ -56,7 +51,7 @@ class ProfileTabsCollectionReusableView: UICollectionReusableView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
         
         let size = height - (Constants.padding * 2)

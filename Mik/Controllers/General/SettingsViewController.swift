@@ -9,12 +9,6 @@
 import SafariServices
 import UIKit
 
-struct SettingCellModel {
-    let title: String
-    let handler: (() -> Void)
-    
-}
-
 final class SettingsViewController: UIViewController {
     
     
@@ -144,10 +138,6 @@ final class SettingsViewController: UIViewController {
         
         present(actionSheet, animated: true)
         
-    }
-    
-    enum SettingsURLType {
-        case terms, privacy, help
     }
     
     private func openURL(type: SettingsURLType) {

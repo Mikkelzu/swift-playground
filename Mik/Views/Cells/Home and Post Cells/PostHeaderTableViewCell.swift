@@ -1,5 +1,5 @@
 //
-//  FeedPostTableViewCell.swift
+//  PostHeaderTableViewCell.swift
 //  Mik
 //
 //  Created by Michael on 14/09/2020.
@@ -8,9 +8,8 @@
 
 import UIKit
 
-final class FeedPostTableViewCell: UITableViewCell {
-    
-    static let identifier = "IGFeedPostTableViewCell"
+class PostHeaderTableViewCell: UITableViewCell {
+    static let identifier = "PostHeaderTableViewCell"
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -22,5 +21,9 @@ final class FeedPostTableViewCell: UITableViewCell {
     
     public func configure() {
         // configure the cell
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
     }
 }

@@ -8,12 +8,6 @@
 
 import UIKit
 
-struct EditProfileFormModel {
-    let label: String
-    let placeholder: String
-    var value: String?
-}
-
 final class EditProfileViewController: UIViewController, UITableViewDataSource  {
     
     private let tableView: UITableView = {
